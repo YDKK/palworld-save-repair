@@ -8,12 +8,13 @@ const COMMIT_DATE: &str = env!("VERGEN_GIT_COMMIT_DATE");
 const COMMIT_HASH: &str = env!("VERGEN_GIT_SHA");
 
 fn main() {
+    println!("---");
     println!(
         "PalWorldSaveRepair v{} {} {}",
         VERSION, COMMIT_DATE, COMMIT_HASH
     );
-    println!("https://github.com/YDKK/PalWorldSaveRepair");
-    println!();
+    println!("https://github.com/YDKK/palworld-save-repair");
+    println!("---");
 
     let env_key = "PLAYERS_SAVE_PATH";
     let Ok(path) = &env::var(env_key) else {

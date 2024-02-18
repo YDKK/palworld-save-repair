@@ -30,6 +30,7 @@ services:
       - ./palworld:/palworld/
     environment:
       - PLAYERS_SAVE_PATH=/palworld/Pal/Saved/SaveGames/0/0123456789ABCDEF0123456789ABCDEF/Players
+    entrypoint: ""
     # check and repair save data every 1 hour
     command: ["/bin/sh", "-c", "while true; do sleep 3600; /app/pal_world_save_repair; done"]
     restart: unless-stopped
