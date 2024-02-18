@@ -1,0 +1,16 @@
+[package]
+name = "pal_world_save_repair"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.79"
+miniz_oxide = { version = "0.7.2", features = ["std"]}
+uesave = "0.3.0"
+
+[build-dependencies]
+anyhow = "1.0.79"
+vergen = { version = "8.3.1", features = ["git", "gitoxide"] }
