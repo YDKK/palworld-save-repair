@@ -20,5 +20,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
+        context: .
+        file: ./Dockerfile
         push: true
         tags: ydkk/palworld-save-repair:latest
